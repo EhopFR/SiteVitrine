@@ -1,0 +1,8 @@
+<% content_for(:title, @product.name) %>
+
+<h1> <%= @product.name %> </h1>
+<p> <%= @product.description%> </p>
+<p>
+  <%= link_to 'Retour' , root_path, class: "btn btn-primary" %>
+  <%= link_to 'Éditer', edit_product_path(@product.id), class: "btn btn-primary" %>
+</p>

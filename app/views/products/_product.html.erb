@@ -1,0 +1,17 @@
+<div class="product" style="width:100%; padding:10px; border:1px solid black; border-radius:5px;display:inline-block;margin:10px;">
+  <h2><%= product.name %></h2>
+  <p><%= product.description %></p>
+  <% if product.category %>
+    <p>Catégorie : <%= product.category.name %></p>
+  <% end %>
+  <% if !product.tags.empty? %>
+    <p>Tags :
+      <% product.tags.each do |tag| %>
+        | <%= tag.name %> |
+      <% end %>
+    </p>
+  <% end %>
+  <%= link_to 'Voir plus', product_path(product.id), class: "btn btn-primary" %>
+  <%= link_to 'Éditer', edit_product_path(product.id),class: "btn btn-default" %>
+  <a href="<%= product_path(product.id) %>" class="btn btn-danger" data-confirm="Êtes-vous sur ? " data-method= "DELETE">Supprimer</a>
+</div>

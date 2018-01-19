@@ -1,0 +1,16 @@
+<h1 style="color:#EC1445; text-decoration:underline">Bienvenue sur le site vitrine</h1>
+
+
+<h2>Les produits en ligne</h2>
+<% @products_online.each do |product| %>
+  <%= render product %>
+<% end %>
+
+
+<h2>Les produits hors-ligne </h2>
+<% @products_offline.each do |product| %>
+  <%= render product %>
+<% end %>
+
+<%= link_to 'Créer un produit', new_product_path, class: "btn btn-default" %>
+<%= link_to 'Toutes les catégories', categories_path, class: "btn btn-default" %>

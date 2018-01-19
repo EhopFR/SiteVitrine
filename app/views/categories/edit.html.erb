@@ -1,0 +1,6 @@
+<h1>Modifier la catégorie</h1>
+<%= form_for @category do |f| %>
+  <%= f.text_field :name  , placeholder: "Nom de catégorie", class: 'form-control' %>
+  <%= f.text_field :slug , placeholder: "Slug", class: 'form-control' %>
+  <%= f.submit 'Modifier la catégorie', :class => "btn btn-primary" %>
+<% end %>
