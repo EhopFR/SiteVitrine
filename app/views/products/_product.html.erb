@@ -1,5 +1,6 @@
 <div class="product" style="width:100%; padding:10px; border:1px solid black; border-radius:5px;display:inline-block;margin:10px;">
   <h2><%= product.name %></h2>
+  <%= link_to image_tag(product.image.url(:large)), product.image.url %>
   <p><%= product.description %></p>
   <% if product.category %>
     <p>Catégorie : <%= product.category.name %></p>
